@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import './CSS/chatBot.css'; // Import styling for the chatbot
 
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API); // Use an environment variable for security
-const model = genAI.getGenerativeModel({ model: 'tunedModels/sit-bookstore-prompts-ch8gj7n2yusn' });
+const model = genAI.getGenerativeModel({ model: 'tunedModels/sit-bookstore-prompts-20-hzmhblzoztil' });
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]); // Stores the chat messages

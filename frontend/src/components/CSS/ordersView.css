@@ -1,0 +1,74 @@
+.orders-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  gap: 10px; /* Space between products and order details */
+  padding: 20px;
+  margin-bottom: 20px; /* Space between each order */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.order-details {
+  flex: 1;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-products {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-product {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  gap: 10px; 
+  flex: 1 1 300px; /* Makes each product take up at least 150px in width */
+  max-width: 350px; /* Limits the maximum width of each product */
+  max-height: 200px; /* Limit height to keep the container shorter */
+
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.order-product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.order-product-info {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.order-item h3,
+.order-item p {
+  margin: 5px 0;
+}
+
+.order-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+}

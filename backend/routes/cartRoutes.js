@@ -18,7 +18,7 @@ router.get('/:userId', async (req, res) => {
     console.error('Error fetching cart:', error);
     res.status(500).json({ message: 'Internal Server Error' });
   }
-});
+}); 
 
 // Add or update a product in the cart
 router.post('/add', async (req, res) => {

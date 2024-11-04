@@ -37,4 +37,23 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Get all orders for a specific user
+router.get('/:userId', async (req, res) => {
+
+  const { userId } = req.params;
+  
+  try {
+    const orders = await Order.find({ user: userId }).populate('products.product');
+    if (!orders || orders.length === 0) {
+      return res.status(404).json({ message: 'No orders found' });
+    }
+    res.json(orders);
+  } catch (error) {
+    console.error('Error fetching orders:', error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
+
+
+
 module.exports = router;
