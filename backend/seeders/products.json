@@ -1,0 +1,114 @@
+[
+    {
+      "_id": "66fac9864d38cbad00c8e983",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 10.99,
+      "imageUrl": "backend/seeders/images/The Great Gatsby.jpg",
+      "description": "A novel set in the 1920s that tells the story of Jay Gatsby and his unrequited love for Daisy Buchanan."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e984",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 12.99,
+      "imageUrl": "backend/seeders/images/To Kill a Mockingbird.jpg",
+      "description": "A coming-of-age story set in the racially charged atmosphere of the American South during the 1930s."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e985",
+      "title": "1984",
+      "author": "George Orwell",
+      "price": 15.99,
+      "imageUrl": "backend/seeders/images/1984.jpg",
+      "description": "A dystopian novel that explores the dangers of totalitarianism."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e986",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "price": 9.99,
+      "imageUrl": "backend/seeders/images/Moby Dick.jpg",
+      "description": "The narrative of Captain Ahab's obsessive quest to kill the white whale, Moby Dick."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e987",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 8.99,
+      "imageUrl": "backend/seeders/images/Pride and Prejudice.jpg",
+      "description": "A romantic novel that also critiques the British landed gentry at the end of the 18th century."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e992",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "price": 10.99,
+      "imageUrl": "backend/seeders/images/The Catcher in the Rye.jpg",
+      "description": "A story about teenage rebellion and the challenges of growing up."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e993",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "price": 14.99,
+      "imageUrl": "backend/seeders/images/The Hobbit.jpg",
+      "description": "A fantasy novel that precedes the events of The Lord of the Rings."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e994",
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "price": 24.99,
+      "imageUrl": "backend/seeders/images/War and Peace.jpg",
+      "description": "A historical novel that intertwines the lives of several families during the Napoleonic era."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e995",
+      "title": "The Odyssey",
+      "author": "Homer",
+      "price": 18.99,
+      "imageUrl": "backend/seeders/images/The Odyssey.jpg",
+      "description": "An epic poem detailing the adventures of Odysseus."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e996",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "price": 13.99,
+      "imageUrl": "backend/seeders/images/Brave New World.jpg",
+      "description": "A dystopian novel envisioning a future controlled by technology and conditioning."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e997",
+      "title": "The Divine Comedy",
+      "author": "Dante Alighieri",
+      "price": 22.99,
+      "imageUrl": "backend/seeders/images/The Divine Comedy.jpg",
+      "description": "An epic poem about Dante’s journey through Hell, Purgatory, and Paradise."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e998",
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "price": 11.99,
+      "imageUrl": "backend/seeders/images/Jane Eyre.jpg",
+      "description": "A coming-of-age novel about a young woman's struggles for independence and love."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e999",
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "price": 9.99,
+      "imageUrl": "backend/seeders/images/Frankenstein.jpg",
+      "description": "The story of a scientist who creates a sentient creature."
+    },
+    {
+      "_id": "66fac9864d38cbad00c8e1000",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "price": 12.99,
+      "imageUrl": "backend/seeders/images/The Alchemist.jpg",
+      "description": "A philosophical book about a shepherd’s journey to realize his destiny."
+    }
+]
