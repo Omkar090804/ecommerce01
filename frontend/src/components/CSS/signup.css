@@ -1,0 +1,80 @@
+/* Center the signup wrapper */
+.signup-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 90vh; /* Full viewport height */
+    background-color: #f8f9fa; /* Optional background color for contrast */
+}
+
+.signup-container {
+    max-width: 600px; /* Increased max width */
+    width: 90%; /* Ensure the container is responsive */
+    padding: 40px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px; /* Increased font size for the title */
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form input {
+    margin-bottom: 15px;
+    padding: 12px; /* Increased padding for input fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size for input fields */
+}
+
+.signup-form button {
+    padding: 12px; /* Increased padding for button */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size for button */
+}
+
+.signup-form button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 20px; /* Reduced padding on smaller screens */
+    }
+
+    .signup-title {
+        font-size: 20px; /* Smaller title size */
+    }
+
+    .signup-form input,
+    .signup-form button {
+        font-size: 14px; /* Smaller font size for inputs and button */
+        padding: 10px; /* Reduced padding for inputs and button */
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-title {
+        font-size: 18px; /* Even smaller title size */
+    }
+
+    .signup-form input,
+    .signup-form button {
+        font-size: 12px; /* Further reduced font size for inputs and button */
+        padding: 8px; /* Further reduced padding for inputs and button */
+    }
+}
