@@ -136,9 +136,9 @@ const CartView = () => {
               />
               <div className="cart-item-info">
                 <h3>{item.product.title}</h3>
-                <p>Price: ${item.product.price.toFixed(2)}</p>
+                <p>Price: ₹{item.product.price.toFixed(2)}</p>
                 <p>Quantity: {item.quantity}</p>
-                <p>Total: ${(item.product.price * item.quantity).toFixed(2)}</p>
+                <p>Total: ₹{(item.product.price * item.quantity).toFixed(2)}</p>
                 <div className="quantity-controls">
                   <button onClick={() => handleDecreaseQuantity(item.product._id)}>-</button>
                   <span>{item.quantity}</span>
@@ -154,7 +154,7 @@ const CartView = () => {
       )}
       {cartItems.length > 0 && (
         <div className="cart-summary">
-          <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
+          <h3>Total Price: ₹{totalPrice.toFixed(2)}</h3>
           <button onClick={handleCheckout} className="checkout-button">
             Proceed to Checkout
           </button>

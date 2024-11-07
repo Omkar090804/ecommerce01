@@ -63,9 +63,9 @@ const Orders = () => {
                         />
                         <div className="order-product-info">
                           <h4>{item.product.title}</h4>
-                          <p>Price: ${item.product.price.toFixed(2)}</p>
+                          <p>Price: ₹{item.product.price.toFixed(2)}</p>
                           <p>Quantity: {item.quantity}</p>
-                          <p>Subtotal: ${(item.product.price * item.quantity).toFixed(2)}</p>
+                          <p>Subtotal: ₹{(item.product.price * item.quantity).toFixed(2)}</p>
                         </div>
                         </div>
                     ))}
