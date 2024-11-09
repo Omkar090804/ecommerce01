@@ -7,8 +7,6 @@ import Footer from '../components/footer';
 import Chatbot from '../components/chatBot';
 import { jwtDecode } from "jwt-decode";
 
-//import './Home.css'; // Optional: CSS file for styling
-
 const Home = () => {
   const [user, setUser] = useState(null); // State to store user info
 

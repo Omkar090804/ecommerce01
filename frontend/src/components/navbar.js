@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'; // Import Cookies to handle cookie deletion
 import '../components/CSS/home.css'; // We'll define the CSS below
 import logo from '../assets/sitlogo.png';
 
-const Navbar = () => {
+const Navbar = ({user}) => {
   const navigate = useNavigate(); // Use navigate hook to programmatically navigate
 
   // Function to handle logout
@@ -23,6 +23,7 @@ const Navbar = () => {
         <h1 className="brand-name">Book Store: SIT Pune</h1>
       </div>
       <ul className="nav-links">
+        <li>Welcome, {user?.name}</li>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/cart">Cart</Link></li>
         <li><Link to="/orders">Orders</Link></li>

@@ -10,6 +10,7 @@ import Footer from "../components/footer";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [userId, setUserId] = useState(null);
+  const [user, setUser] = useState(null);
 
   // Decode JWT to get user ID
   useEffect(() => {
@@ -17,6 +18,7 @@ const Orders = () => {
     if (token) {
       const decoded = jwtDecode(token);
       setUserId(decoded.id);
+      setUser(decoded);
     }
   }, []);
 
@@ -40,7 +42,7 @@ const Orders = () => {
   
   return (
     <div>
-      <Navbar />
+      <Navbar user={user} />
 
       <div className="orders-container">
             <h2>Your Orders</h2>
