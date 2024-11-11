@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import '../components/CSS/login.css'; // Importing the CSS file for styling
-import placeholder from '../../src/assets/placeholder.png'; // Placeholder image
+import sitlogo from '../../src/assets/sitlogo.png'; // Placeholder image
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-image">
-        <img src={placeholder} alt="Login" />
+        <img src={sitlogo} alt="Login" />
         <p className="image-text">SIT Book Store</p> {/* Added descriptive text */}
       </div>
       <div className="login-form-container">
