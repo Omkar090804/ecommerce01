@@ -26,7 +26,7 @@ const Products = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await axios.get('http://localhost:5000/api/products');
+      const response = await axios.get(process.env.REACT_APP_BASE_URL + 'api/products');
       setProducts(response.data);
     };
     fetchProducts();
@@ -36,7 +36,7 @@ const Products = () => {
   const fetchCart = async () => {
     if (userId) {
       try {
-        const response = await axios.get(`http://localhost:5000/api/cart/${userId}`);
+        const response = await axios.get(process.env.REACT_APP_BASE_URL + `api/cart/${userId}`);
         setCart(response.data.products);
       } catch (error) {
         console.error('Error fetching cart:', error);
@@ -52,7 +52,7 @@ const Products = () => {
   // Function to add product to the cart via API
   const handleAddToCart = async (product) => {
     try {
-      await axios.post('http://localhost:5000/api/cart/add', {
+      await axios.post(process.env.REACT_APP_BASE_URL + 'api/cart/add', {
         userId: userId,
         productId: product._id,
       });
@@ -72,7 +72,7 @@ const Products = () => {
     const cartItem = cart.find((item) => item.product._id === productId);
     if (cartItem && cartItem.quantity > 1) {
       try {
-        await axios.post('http://localhost:5000/api/cart/decrease', {
+        await axios.post(process.env.REACT_APP_BASE_URL + 'api/cart/decrease', {
           userId,
           productId,
         });
@@ -83,7 +83,7 @@ const Products = () => {
     } else {
       // If the quantity is 1, remove the item from the cart
       try {
-        await axios.delete(`http://localhost:5000/api/cart/${userId}/product/${productId}`);
+        await axios.delete(process.env.REACT_APP_BASE_URL + `api/cart/${userId}/product/${productId}`);
         fetchCart(); // Re-fetch the cart after removing the product
       } catch (error) {
         console.error('Error removing product from cart:', error);

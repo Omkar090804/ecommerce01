@@ -29,7 +29,7 @@ const CartView = () => {
   // Fetch the cart for the logged-in user
   const fetchCart = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/cart/${userId}`);
+      const response = await axios.get(process.env.REACT_APP_BASE_URL + `api/cart/${userId}`);
       setCartItems(response.data.products);
       calculateTotal(response.data.products);
     } catch (error) {
@@ -49,7 +49,7 @@ const CartView = () => {
   // Function to increase the quantity
   const handleIncreaseQuantity = async (productId) => {
     try {
-      await axios.post('http://localhost:5000/api/cart/add', {
+      await axios.post(process.env.REACT_APP_BASE_URL + 'api/cart/add', {
         userId,
         productId,
       });
@@ -64,7 +64,7 @@ const CartView = () => {
     const cartItem = cartItems.find(item => item.product._id === productId);
     if (cartItem && cartItem.quantity > 1) {
       try {
-        await axios.post('http://localhost:5000/api/cart/decrease', {
+        await axios.post(process.env.REACT_APP_BASE_URL + 'api/cart/decrease', {
           userId,
           productId,
         });
@@ -81,7 +81,7 @@ const CartView = () => {
   // Function to remove a product from the cart
   const handleRemoveProduct = async (productId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/cart/${userId}/product/${productId}`);
+      await axios.delete(process.env.REACT_APP_BASE_URL + `api/cart/${userId}/product/${productId}`);
       fetchCart(); // Refresh cart after removal
     } catch (error) {
       console.error('Error removing product:', error);
@@ -107,7 +107,7 @@ const CartView = () => {
       };
 
       // Send the order details to the backend
-      await axios.post('http://localhost:5000/api/orders', orderDetails);
+      await axios.post( process.env.REACT_APP_BASE_URL + 'api/orders', orderDetails);
 
       // Clear the cart and close modal
       setCartItems([]);

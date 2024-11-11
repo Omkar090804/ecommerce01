@@ -12,7 +12,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/users/signup', { username, email, password });
+      await axios.post(process.env.REACT_APP_BASE_URL + 'api/users/signup', { username, email, password });
       alert('User created');
       navigate('/login');
       setUsername('');

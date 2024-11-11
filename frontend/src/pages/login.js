@@ -22,7 +22,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', { email, password });
+      const response = await axios.post(process.env.REACT_APP_BASE_URL + 'api/users/login', { email, password });
       if (response.data.isOK) {
         console.log('Login successful:', response.data.token);
         Cookies.set('authToken', response.data.token, { expires: 30 }); // Store the token in cookies

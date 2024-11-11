@@ -32,7 +32,7 @@ const Orders = () => {
   const fetchOrders = async () => {
     try {
       console.log(userId)
-      const response = await axios.get(`http://localhost:5000/api/orders/${userId}`);
+      const response = await axios.get(process.env.REACT_APP_BASE_URL + `api/orders/${userId}`);
       setOrders(response.data);
     } catch (error) {
       console.error('Error fetching orders:', error);
