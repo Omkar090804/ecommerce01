@@ -43,8 +43,8 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-image">
-        <img src={sitlogo} alt="Login" />
-        <p className="image-text">SIT Book Store</p> {/* Added descriptive text */}
+        <img src={sitlogo} alt="Login"/>
+        <p className="image-text">SIT Book Store</p>
       </div>
       <div className="login-form-container">
         <form onSubmit={handleLogin} className="login-form">
