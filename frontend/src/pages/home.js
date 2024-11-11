@@ -6,6 +6,7 @@ import Products from '../components/Products'; // Adjust the import based on you
 import Footer from '../components/footer';
 import Chatbot from '../components/chatBot';
 import { jwtDecode } from "jwt-decode";
+import '../components/CSS/home.css'
 
 const Home = () => {
   const [user, setUser] = useState(null); // State to store user info
@@ -31,13 +32,14 @@ const Home = () => {
 
   return (
     <div>
+      <div className="home-wrapper">
       <Navbar user={user} />
-
-      <Products />
-
+      <div className="main-content">
+        <Products />
+      </div>
       <Footer />
-
       <Chatbot />
+    </div>
     </div>
   );
 };

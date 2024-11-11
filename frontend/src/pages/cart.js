@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import CartView from '../components/cartView';
 import { jwtDecode } from "jwt-decode";
 import Cookies from 'js-cookie';
+import '../components/CSS/cartView.css'
 
 const Cart = () => {
 
@@ -31,9 +32,13 @@ const Cart = () => {
 
   return(
     <div>
+      <div className="cart-wrapper">
       <Navbar user={user} />
-      <CartView/>
-      <Footer/>
+      <div className="main-content">
+        <CartView />
+      </div>
+      <Footer />
+    </div>
     </div>
   )
 };

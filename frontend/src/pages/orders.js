@@ -1,3 +1,4 @@
+// Orders.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -39,59 +40,55 @@ const Orders = () => {
     }
   };
 
-  
   return (
-    <div>
+    <div className="orders-wrapper">
       <Navbar user={user} />
 
       <div className="orders-container">
-            <h2>Your Orders</h2>
-            {orders.length === 0 ? (
-            <p>You have no orders.</p>
-            ) : (
-            <div className="orders-list">
-              {orders.map(order => (
-                <div key={order._id} className="order-item">
-                  {/* Product Details */}
-                  <div className="order-products">
-                    {order.products.map(item => (
-
-                      <div key={item.product._id} className="order-product">
-                        <img
-                          src={item.product.imageUrl || placeholder}
-                          alt={item.product.title}
-                          className="order-product-image"
-                          onError={(e) => (e.target.src = placeholder)}
-                        />
-                        <div className="order-product-info">
-                          <h4>{item.product.title}</h4>
-                          <p>Price: ₹{item.product.price.toFixed(2)}</p>
-                          <p>Quantity: {item.quantity}</p>
-                          <p>Subtotal: ₹{(item.product.price * item.quantity).toFixed(2)}</p>
-                        </div>
-                        </div>
-                    ))}
-                  </div>
-
-                  {/* Order Details */}
-                  <div className="order-details">
-                    <h3>Order #{order._id}</h3>
-
-                    <p>Total Amount: ${order.totalAmount.toFixed(2)}</p>
-                    <p>Payment Method: {order.paymentMethod}</p>
-                    <p>Status: {order.status}</p>
-                    <p>Date: {new Date(order.createdAt).toLocaleString()}</p>
-                  </div>
-                  
+        <h2>Your Orders</h2>
+        {orders.length === 0 ? (
+          <p>You have no orders.</p>
+        ) : (
+          <div className="orders-list">
+            {orders.map(order => (
+              <div key={order._id} className="order-item">
+                {/* Product Details */}
+                <div className="order-products">
+                  {order.products.map(item => (
+                    <div key={item.product._id} className="order-product">
+                      <img
+                        src={item.product.imageUrl || placeholder}
+                        alt={item.product.title}
+                        className="order-product-image"
+                        onError={(e) => (e.target.src = placeholder)}
+                      />
+                      <div className="order-product-info">
+                        <h4>{item.product.title}</h4>
+                        <p>Price: ₹{item.product.price.toFixed(2)}</p>
+                        <p>Quantity: {item.quantity}</p>
+                        <p>Subtotal: ₹{(item.product.price * item.quantity).toFixed(2)}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          )}
-        </div>
 
-        <Footer />
+                {/* Order Details */}
+                <div className="order-details">
+                  <h3>Order #{order._id}</h3>
+                  <p>Total Amount: ₹{order.totalAmount.toFixed(2)}</p>
+                  <p>Payment Method: {order.paymentMethod}</p>
+                  <p>Status: {order.status}</p>
+                  <p>Date: {new Date(order.createdAt).toLocaleString()}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <Footer />
     </div>
   );
-}  
+};
 
 export default Orders;

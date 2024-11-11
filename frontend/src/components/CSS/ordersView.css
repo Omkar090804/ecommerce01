@@ -109,6 +109,20 @@
   transition: transform 0.3s ease;
 }
 
+.orders-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the wrapper takes at least full height of the viewport */
+}
+
+footer {
+  margin-top: auto; /* Push the footer to the bottom if content is short */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .order-item {
     grid-template-columns: 1fr;
