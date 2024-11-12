@@ -12,7 +12,6 @@ const Footer = () => {
         <div className="footer-center">
           <ul className="footer-nav">
             <li><a href="/home">Home</a></li>
-            <li><a href="/products">Products</a></li>
             <li><a href="/cart">Cart</a></li>
             <li><a href="/orders">Orders</a></li>
           </ul>
