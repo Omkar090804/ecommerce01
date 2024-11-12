@@ -11,8 +11,6 @@ const Navbar = ({user}) => {
   const handleLogout = () => {
     // Delete the authToken cookie
     Cookies.remove('authToken');
-    
-    // Optionally navigate to the login page or home page after logout
     navigate('/login');
   };
 
